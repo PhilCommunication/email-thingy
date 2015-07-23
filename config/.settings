@@ -1,0 +1,19 @@
+{
+    "username": "philcommunication@oktana.com", 
+    "project_name": "email thingy", 
+    "org_url": "", 
+    "namespace": "", 
+    "metadata_container": "1dc37000000LkaEAAS", 
+    "environment": "production", 
+    "workspace": "/Users/mac-40/Documents/Oktana/mavensmate", 
+    "id": "SCHWWYVZSTFI8LYBHD9VXVUHYUPYXKU3", 
+    "subscription": [
+        "ApexClass", 
+        "ApexComponent", 
+        "ApexPage", 
+        "ApexTrigger", 
+        "StaticResource", 
+        "CustomObject", 
+        "Profile"
+    ]
+}

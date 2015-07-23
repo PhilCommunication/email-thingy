@@ -1,0 +1,232 @@
+<apex:page controller="DeveloperController" docType="html-5.0" sidebar="false" showHeader="false">
+	<html lang="en">
+		<head>
+			<meta charset="utf-8" />
+			<title>Space Training</title>
+		    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Exo+2:300" />
+			<apex:stylesheet value="{!URLFOR($Resource.newDeveloperSignUp, 'css/bootstrap.min.css')}"/>
+			<apex:stylesheet value="{!URLFOR($Resource.newDeveloperSignUp, 'css/style.css')}"/>
+		</head>
+		<body>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="toplinks">
+						<div class="hidden-xs">
+							<div class="toplogo">
+								<apex:image url="{!URLFOR($Resource.newDeveloperSignUp, 'img/logo.png')}" alt="Oktana" />
+							</div>
+							<div class="socialmedia">
+								<apex:image url="{!URLFOR($Resource.newDeveloperSignUp, 'img/ico_in.png')}" alt="Linked In" />
+							</div>
+							<div class="socialmedia">
+								<apex:image url="{!URLFOR($Resource.newDeveloperSignUp, 'img/ico_plus.png')}" alt="Google Plus" />
+							</div>
+							<div class="socialmedia">
+								<apex:image url="{!URLFOR($Resource.newDeveloperSignUp, 'img/ico_mail.png')}" alt="Mail" />
+							</div>
+						</div>
+						<div class="visible-xs">
+							<div class="toplogo-xs">
+								<apex:image url="{!URLFOR($Resource.newDeveloperSignUp, 'img/logo.png')}" alt="Oktana" width="101" height="20" />
+							</div>
+							<div class="socialmedia-xs">
+								<apex:image url="{!URLFOR($Resource.newDeveloperSignUp, 'img/ico_in.png')}" alt="Linked In" />
+							</div>
+							<div class="socialmedia-xs">
+								<apex:image url="{!URLFOR($Resource.newDeveloperSignUp, 'img/ico_plus.png')}" alt="Google Plus" />
+							</div>
+							<div class="socialmedia-xs">
+								<apex:image url="{!URLFOR($Resource.newDeveloperSignUp, 'img/ico_mail.png')}" alt="Mail" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="topimagery">
+						<div class="hidden-xs">
+							<div class="col-sm-5">
+								<div class="titletext">
+									<h1 class="h1lineheight">Buscamos</h1><br />
+									<h1 class="h1blue">all-star<br />developers</h1><br />
+									<h1 class="h1lineheight">con pasi&oacute;n por el front end</h1>
+								</div>
+							</div>
+							<div class="col-sm-7">
+								<apex:image url="{!URLFOR($Resource.newDeveloperSignUp, 'img/watch.png')}" alt="Watch" />
+							</div>
+						</div>
+						<div class="visible-xs">
+							<div class="col-xs-12">
+								<div class="titletext-xs">
+									<h1 class="h1lineheight">Buscamos</h1><br />
+									<h1 class="h1blue">all-star<br />developers</h1><br />
+									<h1 class="h1lineheight">con pasi&oacute;n por el front end</h1>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="imagewatch-xs">
+									<apex:image url="{!URLFOR($Resource.newDeveloperSignUp, 'img/watch.png')}" alt="Watch" width="352" height="242" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bluebar">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="hidden-xs">
+							<div class="col-sm-5 col-sm-offset-1">
+								<div class="bluebartextbox">
+									<p>Y queremos recompensar a los postulantes, con el sorteo* del nuevo <b>Apple Watch</b>.  S&oacute;lo ten&eacute;s que enviarnos tus datos hasta el domingo 26 de abril a trav&eacute;s del formulario en esta p&aacute;gina.</p>
+								</div>
+							</div>
+							<div class="col-sm-5">
+								<div class="bluebartextbox">
+									<p>Si sos un desarrollador de front end, con buen nivel de ingl&eacute;s, esta es tu gran oportunidad para unirte al equipo de Oktana y escribir <b>the best code ever</b>.</p>
+									<p class="ptiny">*Sorteo a realizarse el lunes primero de junio.</p>
+								</div>
+							</div>
+						</div>
+						<div class="visible-xs">
+							<div class="col-xs-12">
+								<div class="bluebartextbox-xs">
+									<p>Y queremos recompensar a los postulantes, con el sorteo* del nuevo <b>Apple Watch</b>.  S&oacute;lo ten&eacute;s que enviarnos tus datos hasta el domingo 26 de abril a trav&eacute;s del formulario en esta p&aacute;gina.</p>
+									<p>Si sos un desarrollador de front end, con buen nivel de ingl&eacute;s, esta es tu gran oportunidad para unirte al equipo de Oktana y escribir <b>the best code ever</b>.</p>
+									<p class="ptiny">*Sorteo a realizarse el lunes primero de junio.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="formbox">
+							<apex:form html-role="form" html-data-toggle="validator" id="submitDetalles" styleClass="formClass">
+									<div class="form-group has-feedback">
+										<label class="control-label" for="inputNombre">NOMBRE</label>
+										<apex:input value="{!inputNombre}" type="text" styleClass="form-control" id="inputNombre" html-placeholder="Nombre y apellido" html-aria-describedby="inputNombreStatus" html-pattern="^[a-zA-Z ]*$" required="true" />
+										<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+										<span id="inputNombreStatus" class="sr-only">(success)</span>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="control-label" for="inputEmail">EMAIL</label>
+										<apex:input value="{!inputEmail}" type="email" styleClass="form-control" id="inputEmail" html-placeholder="Dirección de correo" html-aria-describedby="inputEmailStatus" required="true" />
+										<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+										<span id="inputEmailStatus" class="sr-only">(success)</span>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="control-label" for="inputTelefono">TELÉFONO</label>
+										<apex:input value="{!inputTelefono}" type="text" styleClass="form-control" id="inputTelefono" html-placeholder="Número móvil o fijo" html-aria-describedby="inputTelefonoStatus" html-pattern="^[0-9]+$" required="true" />
+										<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+										<span id="inputTelefonoStatus" class="sr-only">(success)</span>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="control-label" for="inputLinkedIn">LINKEDIN</label>
+										<apex:input value="{!inputLinkedIn}" type="text" styleClass="form-control" id="inputLinkedIn" html-placeholder="Enlace de perfil (Opcional)" html-aria-describedby="inputLinkedInStatus" html-pattern="^[a-zA-Z ]*$" />
+								<!--	<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+										<span id="inputLinkedInStatus" class="sr-only">(success)</span> -->
+									</div>
+									<apex:actionFunction name="sendActionFunction" action="{!save}" oncomplete="sentFunction()" />
+									<apex:commandButton value="enviar" action="sendActionFunction()" />
+									<div class="textenviado">
+										<p class="penviado">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis vitae metus vitae pellentesque.</p>
+									</div>
+							</apex:form>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="hidden-xs">
+						<div class="col-sm-10 col-sm-offset-1">
+							<div class="bottom_big">
+								<p class="bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at lacus vel neque mollis convallis sit amet ut tortor. Sed sed quam at velit volutpat lobortis vel eu urna. Aliquam mollis, mi sed pharetra tincidunt, est orci tempus nibh, at luctus felis arcu at eros. Vestibulum non nibh non odio accumsan placerat. Duis commodo, erat in convallis aliquet, metus arcu vestibulum ipsum, at mollis magna lectus non ipsum.</p>
+								<br />
+								<p class="bottom">Aliquam faucibus, mi id dapibus scelerisque, mi orci congue quam, quis dapibus urna tellus sit amet sem. Vestibulum ut vehicula ex. Praesent in diam erat. Curabitur posuere sapien eros, in lobortis nisl euismod id. Morbi in justo bibendum, volutpat diam ut, condimentum orci. Praesent aliquam mollis neque in luctus. Morbi ultricies, nibh eu accumsan accumsan, neque ante finibus massa, ac rutrum ex arcu sed risus.</p>
+							</div>
+						</div>
+					</div>
+					<div class="visible-xs">
+						<div class="col-xs-12">
+							<div class="bottom_small">
+								<p class="bottom">T&eacute;rminos y condiciones</p>
+								<p class="bottom">Podr&aacute;n participar solamente quienes est&eacute;n inscritos en la conferencia.</p>
+								<p class="bottom">El Apple Watch a entregarse puede variar respecto al de la imagen.</p>
+								<p class="bottom">La persona ganadora ser&acute; notificada por tel&eacute;fono.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="footer_oktana">
+							<p class="oktana">&copy; 2015 Oktana</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<apex:includeScript value="{!URLFOR($Resource.newDeveloperSignUp, 'js/jquery-2.1.4.min-2.js')}"/>
+			<apex:includeScript value="{!URLFOR($Resource.newDeveloperSignUp, 'js/bootstrap.min.js')}"/>
+			<apex:includeScript value="{!URLFOR($Resource.newDeveloperSignUp, 'js/validator.js')}"/>
+			<script>
+				// submit
+				$('.formClass').validator().on('submit', function (e) {
+					if (!e.isDefaultPrevented()) {
+						$('input.btn').attr('style', 'color: #00bcf1!important; border: solid 1px #00bcf1!important; background-color: rgba(0, 0, 0, 0)!important');
+						$('input.btn').val('wait for it...');
+						sendActionFunction();
+						e.preventDefault();
+					} else {
+						if($('input').attr('required')){
+							$(this).addClass('error').dequeue();
+						}
+					}
+				});
+				// confirm submit
+				function sentFunction(){
+					$('input.btn').siblings('div').hide();
+					var enviado = decodeURI('%C2%A1enviado!');
+					$('input.btn').val(enviado);
+					$('input.btn').attr('style', 'color: #00bcf1!important; border: solid 1px #00bcf1!important; background-color: rgba(0, 0, 0, 0)!important');
+					$('div.textenviado').addClass('show');
+				}
+				// style inputs triggered by validator.js 
+				$('.form-group').on('cssChange', function() {
+				    if($(this).hasClass('has-success')){
+				    	$(this).children('input').attr('style', 'border-bottom: solid 1px #ffffff!important; color: #ffffff!important');
+				    } else {
+				    	$(this).children('input').attr('style', 'border-bottom: solid 1px #a94442!important; color: #a94442!important');
+				    	$(this).children('input').addClass('error');
+				    }
+				});
+		    	// if input is empty placeholder text to red
+				$('div.form-group input').blur(function() {
+				    if(!$.trim(this.value).length && $(this).attr('required')) {
+			            $(this).delay(500).queue(function(){
+						    $(this).addClass('error').dequeue();
+						});
+				    }
+				});
+
+				// if input changes update input colours
+				/*$('input').change(function() {
+					if($(this).parents('.form-group').hasClass('has-success')){
+						$(this).attr('style', 'border-bottom: solid 1px #ffffff!important; color: #ffffff!important');
+			    	} else if($(this).parents('.form-group').hasClass('has-error')){
+			    		$(this).attr('style', 'border-bottom: solid 1px #a94442!important; color: #a94442!important');
+			    		$(this).siblings('glyphicon-warning-sign').attr('style', 'opacity: 0');
+			    		$(this).delay(500).queue(function(){
+						    $(this).addClass('error').dequeue();
+						});
+			    	} else {
+			    		$(this).attr('style', 'border-bottom: solid 1px #00bcf1!important; color: #ffffff!important');
+			    	}
+				});*/
+			</script>
+		</body>
+	</html>
+</apex:page>

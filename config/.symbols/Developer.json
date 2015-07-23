@@ -1,0 +1,42 @@
+{
+    "properties": [], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "Developer", 
+    "tableDeclaration": {
+        "type": "Developer", 
+        "modifiers": [
+            "public"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 1
+        }, 
+        "name": "Developer"
+    }, 
+    "key": "01p37000001Jw4bAAC", 
+    "variables": [], 
+    "id": "01p37000001Jw4bAAC", 
+    "methods": [
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "save", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 3
+            }, 
+            "returnType": "void", 
+            "type": null
+        }
+    ]
+}
