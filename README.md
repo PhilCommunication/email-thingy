@@ -88,25 +88,25 @@ Review the Android documentation regarding the integration of your Android mobil
 
 2. Record the Project Number value supplied by the Google Cloud Console. You will use this value later in your Android application code as the **Google Cloud Messaging Sender ID**.
 
-    ![image alt text](img/image_00.png)
+    ![image alt text](imgReadMe/image_00.png)
 
 3. In the the left menu click on **APIs** (**APIs & auth** section).
 
 4. Enable **Google Cloud Messaging for Android** by clicking Google Cloud Messaging For Android:
 
-    ![image alt text](img/image_01.png)
+    ![image alt text](imgReadMe/image_01.png)
 
 5. Click the button that says "Enable API".
 
-    ![image alt text](img/image_02.png)
+    ![image alt text](imgReadMe/image_02.png)
 
 6. Click **Credentials** in the left menu.
 
 7. Click **Add credentials **→ **API key**, and select **Android key** in the dialog.
 
-    ![image alt text](img/image_03.png)
+    ![image alt text](imgReadMe/image_03.png)
 
-    ![image alt text](img/image_04.png)
+    ![image alt text](imgReadMe/image_04.png)
 
 8. Retrieve the **SHA1 Certificate Fingerprint** of the Android Debug Key from a (Unix/Mac) Terminal or (Windows) Command Prompt.  *Have each developer on your team complete this step and provide their SHA1 Certificate Fingerprint for inclusion in the ***_allowed Android applications_*** field below. ***_You will also need to add an entry for your production signing key._**
 
@@ -114,17 +114,17 @@ Review the Android documentation regarding the integration of your Android mobil
 
     Windows: `keytool -alias androiddebugkey -keystore %USERPROFILE%\.android\debug.keystore -list -v`
 
-    ![image alt text](img/image_05.jpg)
+    ![image alt text](imgReadMe/image_05.jpg)
 
-    ![image alt text](img/image_06.jpg) 
+    ![image alt text](imgReadMe/image_06.jpg) 
 
 9. Enter a name for your key, and click in **Add package name and fingerprint**. Enter your package name (must match the package name you will use in your Android project) and paste each developer’s **SHA1 Certificate Fingerprint** separated by a semicolon in the corresponding fields, and then click **Create**.
 
-    ![image alt text](img/image_07.png)
+    ![image alt text](imgReadMe/image_07.png)
 
 10. Click **Ok** in the dialog.
 
-    ![image alt text](img/image_08.png)
+    ![image alt text](imgReadMe/image_08.png)
 
 11. Now create a new Server key by repeating step 7 but choosing **Server key**.
 
@@ -132,7 +132,7 @@ Review the Android documentation regarding the integration of your Android mobil
 
     *Important: Leaving this entry blank will simplify development but is not secure. When you have verified that you have things setup correctly you should restrict access by providing individual server IP addresses or, at least, restrict the range to your known address ranges.*
 
-    ![image alt text](img/image_09.png)
+    ![image alt text](imgReadMe/image_09.png)
 
 13. Click **Create** and copy the **API KEY** value from the **Server application**.
 
@@ -156,11 +156,11 @@ To create a new MobilePush app:
 
 2. Create a new app and select the MobilePush template.
 
-    ![image alt text](img/image_10.png)
+    ![image alt text](imgReadMe/image_10.png)
 
 3. Fill in, at a minimum, the mandatory fields in this form.
 
-    ![image alt text](img/image_11.png)
+    ![image alt text](imgReadMe/image_11.png)
 
     *Depending on your setup, repeat this process if you plan on using different instances for production and development.*
 
@@ -182,7 +182,7 @@ Follow these steps in order to connect this MobilePush app to the correct Market
 
 1. Select an account (or New…) in the **Account** drop-down.
 
-    ![image alt text](img/image_12.png)
+    ![image alt text](imgReadMe/image_12.png)
 
 2. Select the **Production ExactTarget Account** button *unless otherwise instructed by your Salesforce Marketing Cloud relationship manager.*
 
@@ -190,7 +190,7 @@ Follow these steps in order to connect this MobilePush app to the correct Market
 
     A popup window (pictured below) will appear.
 
-    ![image alt text](img/image_13.png)
+    ![image alt text](imgReadMe/image_13.png)
 
 4. In an Enterprise 2.0 account, ensure that you select the correct business unit for your app integration.
 
@@ -198,7 +198,7 @@ Follow these steps in order to connect this MobilePush app to the correct Market
 
 6. In the GCM Client section, enter the server API KEY previously created in the [Provision Apps with Google](#heading=h.1aedy6lcafpy) step (you can get this key by entering in the [Google Cloud Console](https://console.developers.google.com/)).
 
-    ![image alt text](img/image_14.png)
+    ![image alt text](imgReadMe/image_14.png)
 
 7. When you have all the fields required for your application’s platform(s) populated, click *Next*.
 
@@ -206,7 +206,7 @@ Follow these steps in order to connect this MobilePush app to the correct Market
 
     You should be presented with a *Success!* message and an application details screen. Any of the areas can be edited by clicking the edit icon associated with the **Summary** or **Application Provisioning** sections.
 
-    ![image alt text](img/image_15.png)
+    ![image alt text](imgReadMe/image_15.png)
 
 Record the **Application ID** and the **Access Token** as they will be used later in the secrets.xml file.
 
@@ -215,13 +215,9 @@ Record the **Application ID** and the **Access Token** as they will be used late
 Copy the following files from this repository into a project in Android Studio:
 
 1. res/values/secrets.xml
-
 2. AndroidManifest.xml
-
 3. build.gradle
-
 4. app/build.gradle
-
 5. ApplicationClass.java
 
 Secrets.xml
@@ -478,19 +474,19 @@ You must provision your mobile app in the iOS Provisioning Panel. The certificat
 
 2. Click Certificates, Identifiers & Profiles.
 
-![image alt text](img/image_16.jpg)
+![image alt text](imgReadMe/image_16.jpg)
 
 3. Click Identifiers.
 
-![image alt text](img/image_17.jpg)
+![image alt text](imgReadMe/image_17.jpg)
 
 4. Click the + icon to create a new app.
 
-![image alt text](img/image_18.jpg)
+![image alt text](imgReadMe/image_18.jpg)
 
 5. Enter a name for the app in the Name text field.
 
-![image alt text](img/image_19.jpg)
+![image alt text](imgReadMe/image_19.jpg)
 
 6. Enter an explicit app ID in the Bundle ID field.
 
@@ -502,17 +498,17 @@ You must provision your mobile app in the iOS Provisioning Panel. The certificat
 
 10. Select your app in the presented list.
 
-![image alt text](img/image_20.jpg)
+![image alt text](imgReadMe/image_20.jpg)
 
 11. Click Edit.
 
 12. Click Create Certificate... under Development SSL Certificate or Production SSL Certificate depending on the instance of the app you provision. Note that you must repeat these steps for both the development and production instances of this app.
 
-![image alt text](img/image_21.jpg)
+![image alt text](imgReadMe/image_21.jpg)
 
 13. Launch Keychain Access on your Mac.
 
-![image alt text](img/image_22.jpg)
+![image alt text](imgReadMe/image_22.jpg)
 
 14. Click Keychain Access.
 
@@ -522,7 +518,7 @@ You must provision your mobile app in the iOS Provisioning Panel. The certificat
 
 17. Enter your email address in the User Email Address field.
 
-![image alt text](img/image_23.jpg)
+![image alt text](imgReadMe/image_23.jpg)
 
 18. Enter a recognizable name for the certificate in the Common Name field.
 
@@ -532,7 +528,7 @@ You must provision your mobile app in the iOS Provisioning Panel. The certificat
 
 21. Enter a filename for the saved certificate.
 
-![image alt text](img/image_24.jpg)
+![image alt text](imgReadMe/image_24.jpg)
 
 22. Choose a location at which to save the certificate.
 
@@ -542,25 +538,25 @@ You must provision your mobile app in the iOS Provisioning Panel. The certificat
 
 25. Click Continue.
 
-![image alt text](img/image_25.jpg)
+![image alt text](imgReadMe/image_25.jpg)
 
 26. Click Choose File.
 
 27. Select the file saved in step 23.
 
-![image alt text](img/image_26.jpg)
+![image alt text](imgReadMe/image_26.jpg)
 
 28. Click Generate.
 
 29. Click Download.
 
-![image alt text](img/image_27.jpg)
+![image alt text](imgReadMe/image_27.jpg)
 
 30. Double-click the downloaded file to install the certificate in Keychain Access.
 
 31. Select the certificate in Keychain Access.
 
-![image alt text](img/image_28.jpg)
+![image alt text](imgReadMe/image_28.jpg)
 
 32. Right-click on the certificate.
 
@@ -572,7 +568,7 @@ You must provision your mobile app in the iOS Provisioning Panel. The certificat
 
 36. Optionally, enter a password in the Password field.
 
-![image alt text](img/image_29.jpg)
+![image alt text](imgReadMe/image_29.jpg)
 
 37. If you entered a password, enter that password again in the Verify field.
 
@@ -598,11 +594,11 @@ To create a new MobilePush app:
 
 2. Create a new app and select the MobilePush template
 
-![image alt text](img/image_30.png)
+![image alt text](imgReadMe/image_30.png)
 
 3. Fill in, at a minimum, the mandatory fields in this form.
 
-![image alt text](img/image_31.png)
+![image alt text](imgReadMe/image_31.png)
 
 *Depending on your setup, repeat this process if you plan on using different instances for production and development.*
 
@@ -624,7 +620,7 @@ Follow these steps in order to connect this MobilePush app to the correct Market
 
 1. Select an account (or New…) in the **Account** drop-down.
 
-![image alt text](img/image_32.png)
+![image alt text](imgReadMe/image_32.png)
 
 2. Select the **Production ExactTarget Account** button *unless otherwise instructed by your Salesforce Marketing Cloud relationship manager.*
 
@@ -632,7 +628,7 @@ Follow these steps in order to connect this MobilePush app to the correct Market
 
 A popup window (pictured below) will appear.
 
-![image alt text](img/image_33.png)
+![image alt text](imgReadMe/image_33.png)
 
 In an Enterprise 2.0 account, ensure that you select the correct business unit for your app integration.
 
@@ -642,7 +638,7 @@ In an Enterprise 2.0 account, ensure that you select the correct business unit f
 
 6. Type in the APNS certificate password in the **Password** field.
 
-![image alt text](img/image_34.png)
+![image alt text](imgReadMe/image_34.png)
 
 7. When you have all the fields required for your application’s platform(s) populated, click *Next*.
 
@@ -650,7 +646,7 @@ In an Enterprise 2.0 account, ensure that you select the correct business unit f
 
 You should be presented with a *Success!* message and an application details screen. Any of the areas can be edited by clicking the edit icon associated with the **Summary** or **Application Provisioning** sections.
 
-![image alt text](img/image_35.png)
+![image alt text](imgReadMe/image_35.png)
 
 ## Implementing the SDK Push Notifications
 
