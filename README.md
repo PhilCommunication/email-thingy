@@ -393,6 +393,7 @@ The `configureTags()` method renders the tags section, a clickable EditTextPrefe
 ## Beacon and Geofence Message Implementation
 
 1. In your application’s app\build.gradle file add the following dependence (required for applications that will run on devices with Android OS < 5.0):
+    
     ```java
     dependencies{
         /* 3rd Party Libraries Required for SDK integration */
@@ -400,6 +401,7 @@ The `configureTags()` method renders the tags section, a clickable EditTextPrefe
     }
     ```
 2. In your AndroidManifest, add the *JB4A SDK Permissions for location and region monitoring*, and the ETLocation Receiver and Service required to receive the push notifications based on the location of the customer.
+
     ```java
     <!-- JB4A SDK Permissions for location and region monitoring -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -420,10 +422,11 @@ The `configureTags()` method renders the tags section, a clickable EditTextPrefe
         android:name="com.exacttarget.etpushsdk.ETLocationService"
         android:enabled="true" />
     <!-- END ETLocationReceiver and Service -->
-
+    ```
 3. In your ApplicationClass, set the `LOCATION_ENABLED` parameter to true:
 
     `public static final boolean *LOCATION_ENABLED *= true;`
+
 
 # iOS
 
