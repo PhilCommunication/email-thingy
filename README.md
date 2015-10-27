@@ -385,6 +385,7 @@ This feature is implemented in Settings Preferences.  We assume that the Subscri
     storeAllTags(this.pusher.getTags());
     configureTags();
     ````
+
 The `storeAllTags(Set<String> tags)` method saves the tags in Preferences and populates the allTags attribute with all of the stored tags.
 
 The `configureTags()` method renders the tags section, a clickable EditTextPreference to add a new tag and the tags from allTags with checkboxes to enable/disable the tag.
