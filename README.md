@@ -188,7 +188,7 @@ Follow these steps in order to connect this MobilePush app to the correct Market
 
 3. Click **Link to Account**.
 
-A popup window (pictured below) will appear.
+    A popup window (pictured below) will appear.
 
     ![image alt text](img/image_13.png)
 
@@ -204,7 +204,7 @@ A popup window (pictured below) will appear.
 
 8. Review the information you provided and check for any potential errors and click **Finish**.
 
-You should be presented with a *Success!* message and an application details screen. Any of the areas can be edited by clicking the edit icon associated with the **Summary** or **Application Provisioning** sections.
+    You should be presented with a *Success!* message and an application details screen. Any of the areas can be edited by clicking the edit icon associated with the **Summary** or **Application Provisioning** sections.
 
     ![image alt text](img/image_15.png)
 
