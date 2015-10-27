@@ -237,17 +237,13 @@ In this file declare the following permissions.
 These permissions are required to receive push messages which use the Google Cloud Messaging service.
 ```java
 <!-- JB4A SDK Google Permissions -->
-
 <permission 
-
-   android:name="${applicationId}.permission.C2D_MESSAGE"
-
-   android:protectionLevel="signature" />
+  android:name="${applicationId}.permission.C2D_MESSAGE"
+  android:protectionLevel="signature" />
 
 <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
 
 <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-
 <!-- END JB4A SDK Google Permissions -->
 ```
 *JB4A SDK required permissions*
@@ -255,7 +251,6 @@ These permissions are required to receive push messages which use the Google Clo
 These permissions are necessary for the SDK to function.  The first three permissions establish internet connection status for the application to synchronize with Marketing Cloud. The WAKE_LOCK permission allows PowerManager WakeLocks to keep the processor from sleeping or screen from dimming.
 ```java
 <!-- JB4A SDK required permissions -->
-
 <uses-permission android:name="android.permission.INTERNET" />
 
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -263,60 +258,38 @@ These permissions are necessary for the SDK to function.  The first three permis
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
 <uses-permission android:name="android.permission.WAKE_LOCK" />
-
 <!-- END JB4A SDK required permissions -->
 ```
 In the activity section, make sure to include the ETPushReceiver and Service for the push notifications.
 ```java
 <!-- ETPushReceiver and Service -->
-
 <receiver
-
-   android:name="com.exacttarget.etpushsdk.ETPushReceiver"
-
-   android:permission="com.google.android.c2dm.permission.SEND" >
+  android:name="com.exacttarget.etpushsdk.ETPushReceiver"
+  android:permission="com.google.android.c2dm.permission.SEND" >
 
    <intent-filter>
-
        <action android:name="${applicationId}.MESSAGE_OPENED" />
-
        <action android:name="com.exacttarget.etpushsdk.SEND_REGISTRATION" />
-
        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-
        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-
        <action android:name="android.intent.action.ACTION_SHUTDOWN" />
-
        <action android:name="android.intent.action.AIRPLANE_MODE" />
-
        <action android:name="android.intent.action.BATTERY_LOW" />
-
        <action android:name="android.intent.action.BATTERY_OKAY" />
-
        <action android:name="android.intent.action.BOOT_COMPLETED" />
-
        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-
        <category android:name="${applicationId}" />
-
    </intent-filter>
 
    <intent-filter>
-
        <action android:name="android.intent.action.PACKAGE_REPLACED" />
-
        <data android:scheme="package" />
-
    </intent-filter>
-
 </receiver>
 
 <service
-
-   android:name="com.exacttarget.etpushsdk.ETPushService"
-
-   android:enabled="true" />
+  android:name="com.exacttarget.etpushsdk.ETPushService"
+  android:enabled="true" />
 
 <!-- END ETPushReceiver and Service -->
 ```
