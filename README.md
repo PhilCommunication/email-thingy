@@ -164,7 +164,7 @@ To create a new MobilePush app:
 
     *Depending on your setup, repeat this process if you plan on using different instances for production and development.*
 
-    Note that following about the required fields:
+    Note the following about the required fields:
 
       1. The **Name** can be anything you choose.
 
@@ -572,7 +572,7 @@ To create a new MobilePush app:
 
     *Depending on your setup, repeat this process if you plan on using different instances for production and development.*
 
-    Note that following about the required fields:
+    Note the following about the required fields:
 
       1. The **Name** can be anything you choose.
 
