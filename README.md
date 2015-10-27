@@ -88,25 +88,25 @@ Review the Android documentation regarding the integration of your Android mobil
 
 2. Record the Project Number value supplied by the Google Cloud Console. You will use this value later in your Android application code as the **Google Cloud Messaging Sender ID**.
 
-    ![image alt text](img/image_0.png)
+    ![image alt text](img/image_00.png)
 
 3. In the the left menu click on **APIs** (**APIs & auth** section).
 
 4. Enable **Google Cloud Messaging for Android** by clicking Google Cloud Messaging For Android:
 
-    ![image alt text](img/image_1.png)
+    ![image alt text](img/image_01.png)
 
 5. Click the button that says "Enable API".
 
-    ![image alt text](img/image_2.png)
+    ![image alt text](img/image_02.png)
 
 6. Click **Credentials** in the left menu.
 
 7. Click **Add credentials **→ **API key**, and select **Android key** in the dialog.
 
-    ![image alt text](img/image_3.png)
+    ![image alt text](img/image_03.png)
 
-    ![image alt text](img/image_4.png)
+    ![image alt text](img/image_04.png)
 
 8. Retrieve the **SHA1 Certificate Fingerprint** of the Android Debug Key from a (Unix/Mac) Terminal or (Windows) Command Prompt.  *Have each developer on your team complete this step and provide their SHA1 Certificate Fingerprint for inclusion in the ***_allowed Android applications_*** field below. ***_You will also need to add an entry for your production signing key._**
 
@@ -114,17 +114,17 @@ Unix/Mac: `keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug
 
 Windows: `keytool -alias androiddebugkey -keystore %USERPROFILE%\.android\debug.keystore -list -v`
 
-    ![image alt text](img/image_5.jpg)
+    ![image alt text](img/image_05.jpg)
 
-    ![image alt text](img/image_6.jpg) 
+    ![image alt text](img/image_06.jpg) 
 
 9. Enter a name for your key, and click in **Add package name and fingerprint**. Enter your package name (must match the package name you will use in your Android project) and paste each developer’s **SHA1 Certificate Fingerprint** separated by a semicolon in the corresponding fields, and then click **Create**.
 
-    ![image alt text](img/image_7.png)
+    ![image alt text](img/image_07.png)
 
 10. Click **Ok** in the dialog.
 
-    ![image alt text](img/image_8.png)
+    ![image alt text](img/image_08.png)
 
 11. Now create a new Server key by repeating step 7 but choosing **Server key**.
 
@@ -132,7 +132,7 @@ Windows: `keytool -alias androiddebugkey -keystore %USERPROFILE%\.android\debug.
 
 *Important: Leaving this entry blank will simplify development but is not secure. When you have verified that you have things setup correctly you should restrict access by providing individual server IP addresses or, at least, restrict the range to your known address ranges.*
 
-    ![image alt text](img/image_9.png)
+    ![image alt text](img/image_09.png)
 
 13. Click **Create** and copy the **API KEY** value from the **Server application**.
 
