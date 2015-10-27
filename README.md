@@ -369,9 +369,11 @@ By default, if your app does not set the Subscriber Key using `setSubscriberKey(
 This feature is implemented in Settings Preferences.  We assume that the Subscriber Key feature has been implemented as described in this guide in order for the following steps to work.
 
 1. Add a Set of tags as a private attribute.
+
    `private Set<String> allTags;`
 
 2. For the implementation of this feature, an instance of PreferenceScreen is needed to display the tags dynamically on the screen.
+   
    `private PreferenceScreen prefScreen;`
 
 3. In the onCreate() method set the values for prefScreen.
@@ -389,52 +391,38 @@ The `configureTags()` method renders the tags section, a clickable EditTextPrefe
 
 ## Beacon and Geofence Message Implementation
 
-1. In your application’s app\build.gradle file add the following dependence (required for applications that will run on devices with Android OS < 5.0)
-
-dependencies{
-   /* 3rd Party Libraries Required for SDK integration */
-   compile 'com.radiusnetworks:AndroidIBeaconLibrary:0.7.6'
-}
-
+1. In your application’s app\build.gradle file add the following dependence (required for applications that will run on devices with Android OS < 5.0):
+    ```java
+    dependencies{
+        /* 3rd Party Libraries Required for SDK integration */
+        compile 'com.radiusnetworks:AndroidIBeaconLibrary:0.7.6'
+    }
+    ```
 2. In your AndroidManifest, add the *JB4A SDK Permissions for location and region monitoring*, and the ETLocation Receiver and Service required to receive the push notifications based on the location of the customer.
+    ```java
+    <!-- JB4A SDK Permissions for location and region monitoring -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- END JB4A SDK location and region monitoring Permissions -->
+    …
 
-*<!-- JB4A SDK Permissions for location and region monitoring -->*
+    <!-- ETLocationReceiver and Service -->
+    <receiver android:name="com.exacttarget.etpushsdk.ETLocationReceiver" >
+        <intent-filter>
+            <action android:name="android.location.PROVIDERS_CHANGED" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </receiver>
 
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <service
+        android:name="com.exacttarget.etpushsdk.ETLocationService"
+        android:enabled="true" />
+    <!-- END ETLocationReceiver and Service -->
 
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+3. In your ApplicationClass, set the `LOCATION_ENABLED` parameter to true:
 
-<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
-*<!-- END JB4A SDK location and region monitoring Permissions -->*
-
-…
-
-*<!-- ETLocationReceiver and Service -->*
-
-<receiver android:name="com.exacttarget.etpushsdk.ETLocationReceiver" >
-
-   <intent-filter>
-
-       <action android:name="android.location.PROVIDERS_CHANGED" />
-
-       <category android:name="android.intent.category.DEFAULT" />
-
-   </intent-filter>
-
-</receiver>
-
-<service
-
-   android:name="com.exacttarget.etpushsdk.ETLocationService"
-
-   android:enabled="true" />
-
-*<!-- END ETLocationReceiver and Service -->*
-
-3. In your ApplicationClass, set the LOCATION_ENABLED parameter to true:
-
-public static final boolean *LOCATION_ENABLED *= true;
+    `public static final boolean *LOCATION_ENABLED *= true;`
 
 # iOS
 
