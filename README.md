@@ -369,16 +369,14 @@ By default, if your app does not set the Subscriber Key using `setSubscriberKey(
 This feature is implemented in Settings Preferences.  We assume that the Subscriber Key feature has been implemented as described in this guide in order for the following steps to work.
 
 1. Add a Set of tags as a private attribute.
-
-  `private Set<String> allTags;`
+   `private Set<String> allTags;`
 
 2. For the implementation of this feature, an instance of PreferenceScreen is needed to display the tags dynamically on the screen.
-
-	`private PreferenceScreen prefScreen;`
+   `private PreferenceScreen prefScreen;`
 
 3. In the onCreate() method set the values for prefScreen.
 
-	`this.prefScreen = getPreferenceScreen();`
+   `this.prefScreen = getPreferenceScreen();`
 
 4. To display the tags on screen, call these methods inside the onCreate() method:
     ```java
