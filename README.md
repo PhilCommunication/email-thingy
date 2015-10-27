@@ -425,7 +425,7 @@ The `configureTags()` method renders the tags section, a clickable EditTextPrefe
     ```
 3. In your ApplicationClass, set the `LOCATION_ENABLED` parameter to true:
 
-    `public static final boolean *LOCATION_ENABLED *= true;`
+    `public static final boolean LOCATION_ENABLED = true;`
 
 
 # iOS
@@ -444,19 +444,19 @@ You must provision your mobile app in the iOS Provisioning Panel. The certificat
 
 2. Click Certificates, Identifiers & Profiles.
 
-![image alt text](imgReadMe/image_16.jpg)
+    ![image alt text](imgReadMe/image_16.jpg)
 
 3. Click Identifiers.
 
-![image alt text](imgReadMe/image_17.jpg)
+    ![image alt text](imgReadMe/image_17.jpg)
 
 4. Click the + icon to create a new app.
 
-![image alt text](imgReadMe/image_18.jpg)
+    ![image alt text](imgReadMe/image_18.jpg)
 
 5. Enter a name for the app in the Name text field.
 
-![image alt text](imgReadMe/image_19.jpg)
+    ![image alt text](imgReadMe/image_19.jpg)
 
 6. Enter an explicit app ID in the Bundle ID field.
 
@@ -468,17 +468,17 @@ You must provision your mobile app in the iOS Provisioning Panel. The certificat
 
 10. Select your app in the presented list.
 
-![image alt text](imgReadMe/image_20.jpg)
+    ![image alt text](imgReadMe/image_20.jpg)
 
 11. Click Edit.
 
 12. Click Create Certificate... under Development SSL Certificate or Production SSL Certificate depending on the instance of the app you provision. Note that you must repeat these steps for both the development and production instances of this app.
 
-![image alt text](imgReadMe/image_21.jpg)
+    ![image alt text](imgReadMe/image_21.jpg)
 
 13. Launch Keychain Access on your Mac.
 
-![image alt text](imgReadMe/image_22.jpg)
+    ![image alt text](imgReadMe/image_22.jpg)
 
 14. Click Keychain Access.
 
@@ -488,7 +488,7 @@ You must provision your mobile app in the iOS Provisioning Panel. The certificat
 
 17. Enter your email address in the User Email Address field.
 
-![image alt text](imgReadMe/image_23.jpg)
+    ![image alt text](imgReadMe/image_23.jpg)
 
 18. Enter a recognizable name for the certificate in the Common Name field.
 
@@ -498,7 +498,7 @@ You must provision your mobile app in the iOS Provisioning Panel. The certificat
 
 21. Enter a filename for the saved certificate.
 
-![image alt text](imgReadMe/image_24.jpg)
+    ![image alt text](imgReadMe/image_24.jpg)
 
 22. Choose a location at which to save the certificate.
 
@@ -508,25 +508,25 @@ You must provision your mobile app in the iOS Provisioning Panel. The certificat
 
 25. Click Continue.
 
-![image alt text](imgReadMe/image_25.jpg)
+    ![image alt text](imgReadMe/image_25.jpg)
 
 26. Click Choose File.
 
 27. Select the file saved in step 23.
 
-![image alt text](imgReadMe/image_26.jpg)
+    ![image alt text](imgReadMe/image_26.jpg)
 
 28. Click Generate.
 
 29. Click Download.
 
-![image alt text](imgReadMe/image_27.jpg)
+    ![image alt text](imgReadMe/image_27.jpg)
 
 30. Double-click the downloaded file to install the certificate in Keychain Access.
 
 31. Select the certificate in Keychain Access.
 
-![image alt text](imgReadMe/image_28.jpg)
+    ![image alt text](imgReadMe/image_28.jpg)
 
 32. Right-click on the certificate.
 
@@ -538,7 +538,7 @@ You must provision your mobile app in the iOS Provisioning Panel. The certificat
 
 36. Optionally, enter a password in the Password field.
 
-![image alt text](imgReadMe/image_29.jpg)
+    ![image alt text](imgReadMe/image_29.jpg)
 
 37. If you entered a password, enter that password again in the Verify field.
 
@@ -564,11 +564,11 @@ To create a new MobilePush app:
 
 2. Create a new app and select the MobilePush template
 
-![image alt text](imgReadMe/image_30.png)
+    ![image alt text](imgReadMe/image_10.png)
 
 3. Fill in, at a minimum, the mandatory fields in this form.
 
-![image alt text](imgReadMe/image_31.png)
+    ![image alt text](imgReadMe/image_11.png)
 
 *Depending on your setup, repeat this process if you plan on using different instances for production and development.*
 
@@ -590,7 +590,7 @@ Follow these steps in order to connect this MobilePush app to the correct Market
 
 1. Select an account (or New…) in the **Account** drop-down.
 
-![image alt text](imgReadMe/image_32.png)
+    ![image alt text](imgReadMe/image_12.png)
 
 2. Select the **Production ExactTarget Account** button *unless otherwise instructed by your Salesforce Marketing Cloud relationship manager.*
 
@@ -598,7 +598,7 @@ Follow these steps in order to connect this MobilePush app to the correct Market
 
 A popup window (pictured below) will appear.
 
-![image alt text](imgReadMe/image_33.png)
+    ![image alt text](imgReadMe/image_13.png)
 
 In an Enterprise 2.0 account, ensure that you select the correct business unit for your app integration.
 
@@ -608,7 +608,7 @@ In an Enterprise 2.0 account, ensure that you select the correct business unit f
 
 6. Type in the APNS certificate password in the **Password** field.
 
-![image alt text](imgReadMe/image_34.png)
+    ![image alt text](imgReadMe/image_14.png)
 
 7. When you have all the fields required for your application’s platform(s) populated, click *Next*.
 
@@ -616,7 +616,7 @@ In an Enterprise 2.0 account, ensure that you select the correct business unit f
 
 You should be presented with a *Success!* message and an application details screen. Any of the areas can be edited by clicking the edit icon associated with the **Summary** or **Application Provisioning** sections.
 
-![image alt text](imgReadMe/image_35.png)
+    ![image alt text](imgReadMe/image_15.png)
 
 ## Implementing the SDK Push Notifications
 
