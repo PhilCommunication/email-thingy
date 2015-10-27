@@ -130,7 +130,7 @@ Review the Android documentation regarding the integration of your Android mobil
 
 12. Enter a name for the key. You can enter server IP address to filter request or leave this entry blank.
 
-*Important: Leaving this entry blank will simplify development but is not secure. When you have verified that you have things setup correctly you should restrict access by providing individual server IP addresses or, at least, restrict the range to your known address ranges.*
+    *Important: Leaving this entry blank will simplify development but is not secure. When you have verified that you have things setup correctly you should restrict access by providing individual server IP addresses or, at least, restrict the range to your known address ranges.*
 
     ![image alt text](img/image_09.png)
 
@@ -162,15 +162,15 @@ To create a new MobilePush app:
 
     ![image alt text](img/image_11.png)
 
-*Depending on your setup, repeat this process if you plan on using different instances for production and development.*
+    *Depending on your setup, repeat this process if you plan on using different instances for production and development.*
 
-Note that following about the required fields:
+    Note that following about the required fields:
 
-    1. The **Name** can be anything you choose.
+      1. The **Name** can be anything you choose.
 
-    2. The **Package** has no correlation to anything outside of the MarketingCloud ecosystem and can be **any** unique identifier for your application.
+      2. The **Package** has no correlation to anything outside of the MarketingCloud ecosystem and can be **any** unique identifier for your application.
 
-    3. The **Description** & **MobilePush Icon** fields are optional but will help you identify your application within your Marketing Cloud account. 
+      3. The **Description** & **MobilePush Icon** fields are optional but will help you identify your application within your Marketing Cloud account. 
 
 4. Click **Next** in order to integrate this new app with your Marketing Cloud account.
 
