@@ -88,7 +88,7 @@ Review the Android documentation regarding the integration of your Android mobil
 
 2. Record the Project Number value supplied by the Google Cloud Console. You will use this value later in your Android application code as the **Google Cloud Messaging Sender ID**.
 
-![image alt text](img/image_0.png)
+    ![image alt text](img/image_0.png)
 
 3. In the the left menu click on **APIs** (**APIs & auth** section).
 
