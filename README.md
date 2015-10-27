@@ -570,15 +570,15 @@ To create a new MobilePush app:
 
     ![image alt text](imgReadMe/image_11.png)
 
-*Depending on your setup, repeat this process if you plan on using different instances for production and development.*
+    *Depending on your setup, repeat this process if you plan on using different instances for production and development.*
 
-Note that following about the required fields:
+    Note that following about the required fields:
 
-    4. The **Name** can be anything you choose.
+      1. The **Name** can be anything you choose.
 
-    5. The **Package** has no correlation to anything outside of the MarketingCloud ecosystem and can be **any** unique identifier for your application.
+      2. The **Package** has no correlation to anything outside of the MarketingCloud ecosystem and can be **any** unique identifier for your application.
 
-    6. The **Description** & **MobilePush Icon** fields are optional but will help you identify your application within your Marketing Cloud account. 
+      3. The **Description** & **MobilePush Icon** fields are optional but will help you identify your application within your Marketing Cloud account. 
 
 4. Click **Next** in order to integrate this new app with your Marketing Cloud account.
 
@@ -596,7 +596,7 @@ Follow these steps in order to connect this MobilePush app to the correct Market
 
 3. Click **Link to Account**.
 
-A popup window (pictured below) will appear.
+    A popup window (pictured below) will appear.
 
     ![image alt text](imgReadMe/image_13.png)
 
@@ -614,7 +614,7 @@ In an Enterprise 2.0 account, ensure that you select the correct business unit f
 
 8. Review the information you provided and check for any potential errors and click **Finish**.
 
-You should be presented with a *Success!* message and an application details screen. Any of the areas can be edited by clicking the edit icon associated with the **Summary** or **Application Provisioning** sections.
+    You should be presented with a *Success!* message and an application details screen. Any of the areas can be edited by clicking the edit icon associated with the **Summary** or **Application Provisioning** sections.
 
     ![image alt text](imgReadMe/image_15.png)
 
