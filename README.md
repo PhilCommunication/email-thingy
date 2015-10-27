@@ -370,25 +370,24 @@ This feature is implemented in Settings Preferences.  We assume that the Subscri
 
 1. Add a Set of tags as a private attribute.
 
-	private Set<String> allTags;
+  `private Set<String> allTags;`
 
 2. For the implementation of this feature, an instance of PreferenceScreen is needed to display the tags dynamically on the screen.
 
-	private PreferenceScreen prefScreen;
+	`private PreferenceScreen prefScreen;`
 
 3. In the onCreate() method set the values for prefScreen.
 
-	this.prefScreen = getPreferenceScreen();
+	`this.prefScreen = getPreferenceScreen();`
 
 4. To display the tags on screen, call these methods inside the onCreate() method:
+    ```java
+    storeAllTags(this.pusher.getTags());
+    configureTags();
+    ````
+The `storeAllTags(Set<String> tags)` method saves the tags in Preferences and populates the allTags attribute with all of the stored tags.
 
-storeAllTags(this.pusher.getTags());
-
-configureTags();
-
-The storeAllTags(Set<String> tags) method saves the tags in Preferences and populates the allTags attribute with all of the stored tags.
-
-The configureTags() method renders the tags section, a clickable EditTextPreference to add a new tag and the tags from allTags with checkboxes to enable/disable the tag.
+The `configureTags()` method renders the tags section, a clickable EditTextPreference to add a new tag and the tags from allTags with checkboxes to enable/disable the tag.
 
 ## Beacon and Geofence Message Implementation
 
