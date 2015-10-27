@@ -238,11 +238,9 @@ These permissions are required to receive push messages which use the Google Clo
 ```java
 <!-- JB4A SDK Google Permissions -->
 <permission 
-  android:name="${applicationId}.permission.C2D_MESSAGE"
-  android:protectionLevel="signature" />
-
+    android:name="${applicationId}.permission.C2D_MESSAGE"
+    android:protectionLevel="signature" />
 <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
-
 <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 <!-- END JB4A SDK Google Permissions -->
 ```
@@ -252,11 +250,8 @@ These permissions are necessary for the SDK to function.  The first three permis
 ```java
 <!-- JB4A SDK required permissions -->
 <uses-permission android:name="android.permission.INTERNET" />
-
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-
 <uses-permission android:name="android.permission.WAKE_LOCK" />
 <!-- END JB4A SDK required permissions -->
 ```
@@ -264,8 +259,8 @@ In the activity section, make sure to include the ETPushReceiver and Service for
 ```java
 <!-- ETPushReceiver and Service -->
 <receiver
-  android:name="com.exacttarget.etpushsdk.ETPushReceiver"
-  android:permission="com.google.android.c2dm.permission.SEND" >
+    android:name="com.exacttarget.etpushsdk.ETPushReceiver"
+    android:permission="com.google.android.c2dm.permission.SEND" >
 
    <intent-filter>
        <action android:name="${applicationId}.MESSAGE_OPENED" />
@@ -288,8 +283,8 @@ In the activity section, make sure to include the ETPushReceiver and Service for
 </receiver>
 
 <service
-  android:name="com.exacttarget.etpushsdk.ETPushService"
-  android:enabled="true" />
+    android:name="com.exacttarget.etpushsdk.ETPushService"
+    android:enabled="true" />
 
 <!-- END ETPushReceiver and Service -->
 ```
