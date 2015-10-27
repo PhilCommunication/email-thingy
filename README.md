@@ -94,37 +94,37 @@ Review the Android documentation regarding the integration of your Android mobil
 
 4. Enable **Google Cloud Messaging for Android** by clicking Google Cloud Messaging For Android:
 
-![image alt text](img/image_1.png)
+    ![image alt text](img/image_1.png)
 
 5. Click the button that says "Enable API".
 
-![image alt text](img/image_2.png)
+    ![image alt text](img/image_2.png)
 
 6. Click **Credentials** in the left menu.
 
 7. Click **Add credentials **→ **API key**, and select **Android key** in the dialog.
 
-![image alt text](img/image_3.png)
+    ![image alt text](img/image_3.png)
 
-![image alt text](img/image_4.png)
+    ![image alt text](img/image_4.png)
 
 8. Retrieve the **SHA1 Certificate Fingerprint** of the Android Debug Key from a (Unix/Mac) Terminal or (Windows) Command Prompt.  *Have each developer on your team complete this step and provide their SHA1 Certificate Fingerprint for inclusion in the ***_allowed Android applications_*** field below. ***_You will also need to add an entry for your production signing key._**
 
-Unix/Mac: keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
+Unix/Mac: `keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v`
 
-Windows: keytool -alias androiddebugkey -keystore %USERPROFILE%\.android\debug.keystore -list -v
+Windows: `keytool -alias androiddebugkey -keystore %USERPROFILE%\.android\debug.keystore -list -v`
 
-![image alt text](img/image_5.jpg)
+    ![image alt text](img/image_5.jpg)
 
-![image alt text](img/image_6.jpg) 
+    ![image alt text](img/image_6.jpg) 
 
 9. Enter a name for your key, and click in **Add package name and fingerprint**. Enter your package name (must match the package name you will use in your Android project) and paste each developer’s **SHA1 Certificate Fingerprint** separated by a semicolon in the corresponding fields, and then click **Create**.
 
-![image alt text](img/image_7.png)
+    ![image alt text](img/image_7.png)
 
 10. Click **Ok** in the dialog.
 
-![image alt text](img/image_8.png)
+    ![image alt text](img/image_8.png)
 
 11. Now create a new Server key by repeating step 7 but choosing **Server key**.
 
@@ -132,11 +132,11 @@ Windows: keytool -alias androiddebugkey -keystore %USERPROFILE%\.android\debug.k
 
 *Important: Leaving this entry blank will simplify development but is not secure. When you have verified that you have things setup correctly you should restrict access by providing individual server IP addresses or, at least, restrict the range to your known address ranges.*
 
-![image alt text](img/image_9.png)
+    ![image alt text](img/image_9.png)
 
 13. Click **Create** and copy the **API KEY** value from the **Server application**.
 
-14. Use the API Key from the server application created above to add to your MobilePush app in the *Create your apps in the App Center* step. And use the project number to set the gcm_sender_id in your project.
+14. Use the API Key from the server application created above to add to your MobilePush app in the *Create your apps in the App Center* step. And use the project number to set the `gcm_sender_id` in your project.
 
 ### Create your apps in the App Center
 
@@ -156,11 +156,11 @@ To create a new MobilePush app:
 
 2. Create a new app and select the MobilePush template.
 
-![image alt text](img/image_10.png)
+    ![image alt text](img/image_10.png)
 
 3. Fill in, at a minimum, the mandatory fields in this form.
 
-![image alt text](img/image_11.png)
+    ![image alt text](img/image_11.png)
 
 *Depending on your setup, repeat this process if you plan on using different instances for production and development.*
 
@@ -182,7 +182,7 @@ Follow these steps in order to connect this MobilePush app to the correct Market
 
 1. Select an account (or New…) in the **Account** drop-down.
 
-![image alt text](img/image_12.png)
+    ![image alt text](img/image_12.png)
 
 2. Select the **Production ExactTarget Account** button *unless otherwise instructed by your Salesforce Marketing Cloud relationship manager.*
 
@@ -190,7 +190,7 @@ Follow these steps in order to connect this MobilePush app to the correct Market
 
 A popup window (pictured below) will appear.
 
-![image alt text](img/image_13.png)
+    ![image alt text](img/image_13.png)
 
 4. In an Enterprise 2.0 account, ensure that you select the correct business unit for your app integration.
 
@@ -198,7 +198,7 @@ A popup window (pictured below) will appear.
 
 6. In the GCM Client section, enter the server API KEY previously created in the [Provision Apps with Google](#heading=h.1aedy6lcafpy) step (you can get this key by entering in the [Google Cloud Console](https://console.developers.google.com/)).
 
-![image alt text](img/image_14.png)
+    ![image alt text](img/image_14.png)
 
 7. When you have all the fields required for your application’s platform(s) populated, click *Next*.
 
@@ -206,7 +206,7 @@ A popup window (pictured below) will appear.
 
 You should be presented with a *Success!* message and an application details screen. Any of the areas can be edited by clicking the edit icon associated with the **Summary** or **Application Provisioning** sections.
 
-![image alt text](img/image_15.png)
+    ![image alt text](img/image_15.png)
 
 Record the **Application ID** and the **Access Token** as they will be used later in the secrets.xml file.
 
@@ -235,22 +235,26 @@ In this file declare the following permissions.
 *JB4A SDK Google Permissions*
 
 These permissions are required to receive push messages which use the Google Cloud Messaging service.
-
-*<!-- JB4A SDK Google Permissions -->*
 ```java
-<permission android:name="${applicationId}.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+<!-- JB4A SDK Google Permissions -->
+
+<permission 
+
+   android:name="${applicationId}.permission.C2D_MESSAGE"
+
+   android:protectionLevel="signature" />
 
 <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
 
 <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-```
-*<!-- END JB4A SDK Google Permissions -->*
 
+<!-- END JB4A SDK Google Permissions -->
+```
 *JB4A SDK required permissions*
 
 These permissions are necessary for the SDK to function.  The first three permissions establish internet connection status for the application to synchronize with Marketing Cloud. The WAKE_LOCK permission allows PowerManager WakeLocks to keep the processor from sleeping or screen from dimming.
-
-*<!-- JB4A SDK required permissions -->*
+```java
+<!-- JB4A SDK required permissions -->
 
 <uses-permission android:name="android.permission.INTERNET" />
 
@@ -260,11 +264,11 @@ These permissions are necessary for the SDK to function.  The first three permis
 
 <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-*<!-- END JB4A SDK required permissions -->*
-
+<!-- END JB4A SDK required permissions -->
+```
 In the activity section, make sure to include the ETPushReceiver and Service for the push notifications.
-
-*<!-- ETPushReceiver and Service -->*
+```java
+<!-- ETPushReceiver and Service -->
 
 <receiver
 
@@ -314,8 +318,8 @@ In the activity section, make sure to include the ETPushReceiver and Service for
 
    android:enabled="true" />
 
-*<!-- END ETPushReceiver and Service -->*
-
+<!-- END ETPushReceiver and Service -->
+```
 Application’s build.gradle
 
 Include the following dependencies in your application's app\build.gradle file.
