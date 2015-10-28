@@ -6,7 +6,9 @@
 
 This project provides a template for creating a mobile app (Android or iOS) that uses the Journey Builder for Apps SDK.  It is also a UI for exploring its features and provides a mechanism to collect and send debugging information to learn about the workings of the SDK as you explore.
 
-The code in this repository includes all of the code used to run the fully functional APK. However, the API keys have been removed. To debug the app or to modify to create a new app, the following keys must be set within the corresponding file (res/values/secrets.xml for Android and AppDelegate+ETPushConstants.m for iOS):
+The code in this repository includes all of the code used to run the fully functional APK. However, the API keys have been removed. To debug, modify or create a new app the following keys must be set within the corresponding file.
+
+For Android (`res/values/secrets.xml`):
 
 1. `app_id`: the App ID for your development app as defined in the App Center section of the Marketing Cloud.
 
@@ -15,6 +17,14 @@ The code in this repository includes all of the code used to run the fully funct
 3. `access_token`: the Access Token for your development app as defined in the App Center section of the Marketing Cloud.
 
 NB: You can use different keys for the staging/testing phase and the production phase.  Staging/testing keys are indicated by the prefix `staging_`.
+
+For iOS (`AppDelegate+ETPushConstants.m`):
+
+1. `kETAppID_Prod`: the App ID for your development app as defined in the App Center section of the Marketing Cloud.
+
+2. `kETAccessToken_Prod`: the Access Token for your development app as defined in the App Center section of the Marketing Cloud.
+
+NB: You can use different keys for the staging/testing phase and the production phase.  Staging/testing keys are called `kETAppID_Debug` and `kETAccessToken_Debug`.
 
 ## Marketing Cloud App Center
 
@@ -222,7 +232,7 @@ Update the following files in your project:
 
 **Secrets.xml**
 
-Put your keys in this file, as explained in the *About* section.
+The SDK can now be configured with the App ID and Access Token, as explained in the *About* section.  Update `app_id` and `access_token` with their respective values.
 
 **AndroidManifest.xml**
 
@@ -622,7 +632,7 @@ In an Enterprise 2.0 account, ensure that you select the correct business unit f
 
 **AppDelegate+ETPushConstants.m**
 
-The SDK can now be configured with the AppID and Access Token.  Update `kETAppID_Prod` and `kETAccessToken_Prod` with their respective values.
+The SDK can now be configured with the App ID and Access Token, as explained in the *About* section.  Update `kETAppID_Prod` and `kETAccessToken_Prod` with their respective values.
 
 **AppDelegate+ETPush.m**
 
