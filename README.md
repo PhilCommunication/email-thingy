@@ -620,11 +620,23 @@ In an Enterprise 2.0 account, ensure that you select the correct business unit f
 
 ## Implementing the SDK Push Notifications
 
-AppDelegate.m
+**AppDelegate+ETPushConstants.m**
 
-Add this line in the import section:
+The SDK can now be configured with the AppID and Access Token.  Update `kETAppID_Prod` and `kETAccessToken_Prod` with their respective values.
 
-#import "AppDelegate+ETPush.h"
+**AppDelegate+ETPush.m**
+
+The boolean parameters `withAnalytics`, `andLocationServices`, `andCloudPages` and `withPIAnalytics` enable certain functionalities of the SDK, however, they are not required for the push notifications themselves to function which will still be sent even if all are set to `NO`.
+
+```objective-c
+successful = [[ETPush pushManager] configureSDKWithAppID:kETAppID_Debug         // set the Debug ID
+                                          andAccessToken:kETAccessToken_Debug   // set the Debug Access Token
+                                           withAnalytics:NO                     
+                                      andLocationServies:NO                     // set geoLocation
+                                           andCloudPages:NO                     
+                                         withPIAnalytics:NO
+                                                   error:&error];
+```
 
 ## Subscriber Key Implementation
 
