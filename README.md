@@ -717,7 +717,7 @@ To implement location services, pass a `YES` value for the `andLocationServices`
 successful = [[ETPush pushManager] configureSDKWithAppID:kETAppID_Debug         // set the Debug ID
                                           andAccessToken:kETAccessToken_Debug   // set the Debug Access Token
                                            withAnalytics:NO                     
-                                     andLocationServices:YES                     // set geoLocation
+                                     andLocationServices:YES                    // set geoLocation
                                            andCloudPages:NO                     
                                          withPIAnalytics:NO
                                                    error:&error];
