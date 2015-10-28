@@ -1,7 +1,6 @@
 # README
 
 [About](README.md#L31)
-
     [Marketing Cloud App Center](README.md#L55)
 
     [Push Notifications](README.md#L75)
@@ -13,7 +12,6 @@
     [Beacon and Geofence Messages](README.md#L93)
 
 [Android](README.md#L103)
-
     [Previous steps](README.md#L105)
 
         [Provision Apps with Google](README.md#L111)
@@ -33,7 +31,6 @@
     [Beacon and Geofence Message Implementation](README.md#L429)
 
 [iOS](README.md#L467)
-
     [Previous steps](README.md#L469)
 
         [iOS Provisioning Panel](README.md#L475)
