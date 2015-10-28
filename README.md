@@ -1,6 +1,31 @@
 # README
 
-[[TOC]]
+[About](README.md#31)
+    [Marketing Cloud App Center](README.md#55)
+    [Push Notifications](README.md#75)
+    [Subscriber key](README.md#79)
+    [Tags](README.md#89)
+    [Beacon and Geofence Messages](README.md#93)
+[Android](README.md#103)
+    [Previous steps](README.md#105)
+        [Provision Apps with Google](README.md#111)
+        [Create your apps in the App Center](README.md#177)
+            [Add app to App Center](README.md#187)
+            [Integrate App Center app](README.md#213)
+    [Implementing the SDK Push Notifications](README.md#249)
+    [Subscriber Key Implementation](README.md#362)
+    [Tag Implementation](README.md#403)
+    [Beacon and Geofence Message Implementation](README.md#429)
+[iOS](README.md#467)
+    [Previous steps](README.md#469)
+        [iOS Provisioning Panel](README.md#475)
+        [Create your apps in the App Center](README.md#585)
+            [Add app to App Center](README.md#595)
+            [Integrate App Center app](README.md#621)
+    [Implementing the SDK Push Notifications](README.md#657)
+    [Subscriber Key Implementation](README.md#705)
+    [Tag Implementation](README.md#719)
+    [Beacon and Geofence Message Implementation](README.md#738)
 
 # About
 
