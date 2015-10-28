@@ -642,7 +642,7 @@ The boolean parameters `withAnalytics`, `andLocationServices`, `andCloudPages` a
 successful = [[ETPush pushManager] configureSDKWithAppID:kETAppID_Debug         // set the Debug ID
                                           andAccessToken:kETAccessToken_Debug   // set the Debug Access Token
                                            withAnalytics:NO                     
-                                      andLocationServies:NO                     // set geoLocation
+                                     andLocationServices:NO                     // set geoLocation
                                            andCloudPages:NO                     
                                          withPIAnalytics:NO
                                                    error:&error];
@@ -680,17 +680,21 @@ Check the error object for detailed failure info. See file PushConstants.h for c
 
 To update the subscriber key, you should create a feature for the user to introduce a value, and then set this new value in the pushManager.
 
+**MCSubscribeKeyViewController.m**
+
 To get the subscriber key, use the following snippet (you can assign this value to any variable):
-
-self.subscriberKey.text = **[[ETPush pushManager] getSubscriberKey]**;
-
+```objective-c
+self.subscriberKey.text = [[ETPush pushManager] getSubscriberKey];
+```
 To set the subscriber key, use the following snippet (substitute self.subscriberKey.text with the appropriate value):
-
-   ** [[ETPush pushManager] setSubscriberKey:**self.subscriberKey.text**];**
-
+```objective-c
+[[ETPush pushManager] setSubscriberKey:self.subscriberKey.text];
+```
 ## Tag Implementation
 
 To implement contact segmentation by tags, include code to set tags for subscriptions as defined by user choice.
+
+**MCTagsViewController.m**
 
 To add a tag:
 
@@ -702,22 +706,21 @@ To remove a tag:
 
 To get all the tags:
 
- [[ETPush pushManager] allTags];
+[[ETPush pushManager] allTags];
 
 ## Beacon and Geofence Message Implementation
 
-To implement location services, pass a YES value for the andLocationServices parameter and use ETLocationManager to monitor location and geofence for a user.
+**AppDelegate+ETPush.m**
 
-  // configure and set initial settings of the JB4ASDK
-    successful = [[ETPush pushManager] configureSDKWithAppID:kETAppID_Debug
-                                              andAccessToken:kETAccessToken_Debug
-                                               withAnalytics:NO
-                                         andLocationServices:YES
-                                               andCloudPages:NO
-                                             withPIAnalytics:NO
-                                                       error:&error];
-        
-    [[ETLocationManager locationManager] startWatchingLocation];
-
+To implement location services, pass a `YES` value for the `andLocationServices` parameter and use `ETLocationManager` to monitor location and geofence for a user.
+```objective-c
+successful = [[ETPush pushManager] configureSDKWithAppID:kETAppID_Debug         // set the Debug ID
+                                          andAccessToken:kETAccessToken_Debug   // set the Debug Access Token
+                                           withAnalytics:NO                     
+                                     andLocationServices:YES                     // set geoLocation
+                                           andCloudPages:NO                     
+                                         withPIAnalytics:NO
+                                                   error:&error];
+```
 Make sure you also add the "NSLocationAlwaysUsageDescription" key to your application’s *.plist file. See docs: [NSLocationAlwaysUsageDescription](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) and [NSLocationUsageDescription](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW27).
 
