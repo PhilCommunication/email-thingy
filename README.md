@@ -724,3 +724,21 @@ successful = [[ETPush pushManager] configureSDKWithAppID:kETAppID_Debug         
 ```
 Make sure you also add the "NSLocationAlwaysUsageDescription" key to your application’s *.plist file. See docs: [NSLocationAlwaysUsageDescription](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) and [NSLocationUsageDescription](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW27).
 
+After push notifications are registered, start watching locations to retrieve the fence and location notifications from ET Geofences and Beacons:
+```objective-c
+/**   
+ Start locations
+ */
+[[ETLocationManager locationManager]startWatchingLocation];
+        
+/**
+ Begins fence retrieval from ET of Geofences.
+ */
+[ETRegion retrieveGeofencesFromET];
+        
+/**
+ Begins fence retrieval from ET of Beacons.
+ */
+[ETRegion retrieveProximityFromET];
+```
+
