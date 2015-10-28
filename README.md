@@ -108,7 +108,15 @@ A valid email address is required to receive emails and a phone number to receiv
 
 The Subscriber Key serves to identify your subscribers.
 
-It can be set to a specific value provided by the subscriber such as a phone number, email address, or other appropriate value as necessary.
+It can be set to a specific value provided by the subscriber such as a phone number, email address, or other appropriate value but most importantly a value that you choose.
+
+For example, using a subscriber key to identify a subscriber with a value other than the email address would allow you to:
+
+* Maintain multiple sets of subscriber attributes for a single email address. For example, if a family shares an email address, you can use a subscriber key to uniquely identify each member of the family.
+
+* Include a single email address multiple times on a list. For example, if a message interaction sends a separate message for each car a subscriber owns, it may be appropriate for a single subscriber to receive multiple messages.
+
+The Salesforce Marketing Cloud interface as well as the Web Service SOAP API support functionality around subscribers identified with a subscriber key.
 
 ## Tags
 
