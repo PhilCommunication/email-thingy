@@ -697,16 +697,17 @@ To implement contact segmentation by tags, include code to set tags for subscrip
 **MCTagsViewController.m**
 
 To add a tag:
-
+```objective-c
 [[ETPush pushManager] addTag:@"tag"];
-
+```
 To remove a tag:
-
+```objective-c
 [[ETPush pushManager] removeTag:@"tag"];
-
+```
 To get all the tags:
-
+```objective-c
 [[ETPush pushManager] allTags];
+```
 
 ## Beacon and Geofence Message Implementation
 
