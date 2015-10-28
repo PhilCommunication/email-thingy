@@ -727,7 +727,7 @@ Make sure you also add the "NSLocationAlwaysUsageDescription" key to your applic
 After push notifications are registered, start watching locations to retrieve the fence and location notifications from ET Geofences and Beacons:
 ```objective-c
 /**   
- Start locations
+ Start geoLocation
  */
 [[ETLocationManager locationManager]startWatchingLocation];
         
@@ -741,4 +741,33 @@ After push notifications are registered, start watching locations to retrieve th
  */
 [ETRegion retrieveProximityFromET];
 ```
+When the application enters background mode, Location Services are disabled through the MobilePush SDK.
 
+```objective-c
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    /**
+     Use this method to disable Location Services through the MobilePush SDK.
+     */
+    [[ETLocationManager locationManager]stopWatchingLocation];
+}
+```
+When the application becomes active, Location Services are initiated through the MobilePush SDK.
+```objective-c
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    /**
+     Use this method to initiate Location Services through the MobilePush SDK.
+     */
+    [[ETLocationManager locationManager]startWatchingLocation];
+}
+```
+**MCGeoLocationViewController.m**
+To check if locations are active, use the boolean method:
+```objective-c
+[[ETLocationManager locationManager]getWatchingLocation]
+```
+If locations are active it returns `YES`, otherwise it returns `NO`.
+
+To obtain the monitored regions use this method:
+```objective-c
+[[ETLocationManager locationManager] monitoredRegions]
+```
