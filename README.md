@@ -1,56 +1,56 @@
 # README
 
-[About](README.md#31)
+[About](README.md#L31)
 
-    [Marketing Cloud App Center](README.md#55)
+    [Marketing Cloud App Center](README.md#L55)
 
-    [Push Notifications](README.md#75)
+    [Push Notifications](README.md#L75)
 
-    [Subscriber key](README.md#79)
+    [Subscriber key](README.md#L79)
 
-    [Tags](README.md#89)
+    [Tags](README.md#L89)
 
-    [Beacon and Geofence Messages](README.md#93)
+    [Beacon and Geofence Messages](README.md#L93)
 
-[Android](README.md#103)
+[Android](README.md#L103)
 
-    [Previous steps](README.md#105)
+    [Previous steps](README.md#L105)
 
-        [Provision Apps with Google](README.md#111)
+        [Provision Apps with Google](README.md#L111)
 
-        [Create your apps in the App Center](README.md#177)
+        [Create your apps in the App Center](README.md#L177)
 
-            [Add app to App Center](README.md#187)
+            [Add app to App Center](README.md#L187)
 
-            [Integrate App Center app](README.md#213)
+            [Integrate App Center app](README.md#L213)
 
-    [Implementing the SDK Push Notifications](README.md#249)
+    [Implementing the SDK Push Notifications](README.md#L249)
 
-    [Subscriber Key Implementation](README.md#362)
+    [Subscriber Key Implementation](README.md#L362)
 
-    [Tag Implementation](README.md#403)
+    [Tag Implementation](README.md#L403)
 
-    [Beacon and Geofence Message Implementation](README.md#429)
+    [Beacon and Geofence Message Implementation](README.md#L429)
 
-[iOS](README.md#467)
+[iOS](README.md#L467)
 
-    [Previous steps](README.md#469)
+    [Previous steps](README.md#L469)
 
-        [iOS Provisioning Panel](README.md#475)
+        [iOS Provisioning Panel](README.md#L475)
 
-        [Create your apps in the App Center](README.md#585)
+        [Create your apps in the App Center](README.md#L585)
 
-            [Add app to App Center](README.md#595)
+            [Add app to App Center](README.md#L595)
 
-            [Integrate App Center app](README.md#621)
+            [Integrate App Center app](README.md#L621)
 
-    [Implementing the SDK Push Notifications](README.md#657)
+    [Implementing the SDK Push Notifications](README.md#L657)
 
-    [Subscriber Key Implementation](README.md#705)
+    [Subscriber Key Implementation](README.md#L705)
 
-    [Tag Implementation](README.md#719)
-    
-    [Beacon and Geofence Message Implementation](README.md#738)
+    [Tag Implementation](README.md#L719)
+
+    [Beacon and Geofence Message Implementation](README.md#L738)
 
 # About
 
