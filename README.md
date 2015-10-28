@@ -366,7 +366,7 @@ The boolean parameters `ANALYTICS_ENABLED`, `CLOUD_PAGES_ENABLED`, `WAMA_ENABLED
     SharedPreferences.Editor editor = sp.edit();
     editor.putString(KEY_PREF_SUBSCRIBER_KEY, newSubscriberKey);
     editor.commit();
-    …
+    ...
     pusher.setSubscriberKey(newSubscriberKey);
     ```
 
@@ -646,6 +646,20 @@ successful = [[ETPush pushManager] configureSDKWithAppID:kETAppID_Debug         
                                            andCloudPages:NO                     
                                          withPIAnalytics:NO
                                                    error:&error];
+```
+If the configuration is successful and returns YES, the push notifications are registered.
+
+```objective-c
+UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:
+                                        UIUserNotificationTypeBadge |
+                                        UIUserNotificationTypeSound |
+                                        UIUserNotificationTypeAlert
+                                                                         categories:nil];
+        
+[[ETPush pushManager] registerUserNotificationSettings:settings];
+[[ETPush pushManager] registerForRemoteNotifications];
+...
+[[ETPush pushManager] applicationLaunchedWithOptions:launchOptions];
 ```
 
 ## Subscriber Key Implementation
