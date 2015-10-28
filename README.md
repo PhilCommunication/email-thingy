@@ -58,7 +58,7 @@ This project provides a template for creating a mobile app (Android or iOS) that
 
 The code in this repository includes all of the code used to run the fully functional APK. However, the API keys have been removed. To debug, modify or create a new app the following keys must be set within the corresponding file.
 
-For Android (`res/values/secrets.xml`):
+For Android (`secrets.xml`):
 
 1. `app_id`: the App ID for your development app as defined in the App Center section of the Marketing Cloud.
 
