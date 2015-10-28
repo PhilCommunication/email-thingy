@@ -2,55 +2,55 @@
 
 1. [About](README.md#L31)
 
-    a. [Marketing Cloud App Center](README.md#L55)
+    1. [Marketing Cloud App Center](README.md#L55)
 
-    b. [Push Notifications](README.md#L75)
+    2. [Push Notifications](README.md#L75)
 
-    c. [Subscriber key](README.md#L79)
+    3. [Subscriber key](README.md#L79)
 
-    d. [Tags](README.md#L89)
+    4. [Tags](README.md#L89)
 
-    e. [Beacon and Geofence Messages](README.md#L93)
+    5. [Beacon and Geofence Messages](README.md#L93)
 
 2. [Android](README.md#L103)
 
-    a. [Previous steps](README.md#L105)
+    1. [Previous steps](README.md#L105)
 
         1. [Provision Apps with Google](README.md#L111)
 
         2. [Create your apps in the App Center](README.md#L177)
 
-            a. [Add app to App Center](README.md#L187)
+            1. [Add app to App Center](README.md#L187)
 
-            b. [Integrate App Center app](README.md#L213)
+            2. [Integrate App Center app](README.md#L213)
 
-    b. [Implementing the SDK Push Notifications](README.md#L249)
+    2. [Implementing the SDK Push Notifications](README.md#L249)
 
-    c. [Subscriber Key Implementation](README.md#L362)
+    3. [Subscriber Key Implementation](README.md#L362)
 
-    d. [Tag Implementation](README.md#L403)
+    4. [Tag Implementation](README.md#L403)
 
-    e. [Beacon and Geofence Message Implementation](README.md#L429)
+    5. [Beacon and Geofence Message Implementation](README.md#L429)
 
 3. [iOS](README.md#L467)
 
-    a. [Previous steps](README.md#L469)
+    1. [Previous steps](README.md#L469)
 
         1. [iOS Provisioning Panel](README.md#L475)
 
         2. [Create your apps in the App Center](README.md#L585)
 
-            a. [Add app to App Center](README.md#L595)
+            1. [Add app to App Center](README.md#L595)
 
-            b. [Integrate App Center app](README.md#L621)
+            2. [Integrate App Center app](README.md#L621)
 
-    b. [Implementing the SDK Push Notifications](README.md#L657)
+    2. [Implementing the SDK Push Notifications](README.md#L657)
 
-    c. [Subscriber Key Implementation](README.md#L705)
+    3. [Subscriber Key Implementation](README.md#L705)
 
-    d. [Tag Implementation](README.md#L719)
+    4. [Tag Implementation](README.md#L719)
 
-    e. [Beacon and Geofence Message Implementation](README.md#L738)
+    5. [Beacon and Geofence Message Implementation](README.md#L738)
 
 # About
 
