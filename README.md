@@ -299,15 +299,15 @@ In the activity section, make sure to include the ETPushReceiver and Service for
 Add the following repository:
 ```java
 allprojects {
-  ...
+  …
   repositories {
     jcenter()
       mavenCentral()
         maven {url "http://salesforcefuel.github.io/JB4A-SDK-Android/repository"
       }
-      ...
+      …
    }
-   ...
+   …
 }
 ```
 **app/build.gradle**
@@ -366,7 +366,7 @@ The boolean parameters `ANALYTICS_ENABLED`, `CLOUD_PAGES_ENABLED`, `WAMA_ENABLED
     SharedPreferences.Editor editor = sp.edit();
     editor.putString(KEY_PREF_SUBSCRIBER_KEY, newSubscriberKey);
     editor.commit();
-    ...
+    …
     pusher.setSubscriberKey(newSubscriberKey);
     ```
 
@@ -658,9 +658,23 @@ UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTy
         
 [[ETPush pushManager] registerUserNotificationSettings:settings];
 [[ETPush pushManager] registerForRemoteNotifications];
-...
+…
 [[ETPush pushManager] applicationLaunchedWithOptions:launchOptions];
 ```
+If the configuration is unsuccessful an error message is shown:
+```objective-c
+dispatch_async(dispatch_get_main_queue(), ^{
+    /**
+     Something has failed in the configureSDKWithAppID call - show error message
+     */
+    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Failed configureSDKWithAppID!", @"Failed configureSDKWithAppID!")
+                                message:[error localizedDescription]
+                                elegate:nil
+                      cancelButtonTitle:NSLocalizedString(@"OK", @"OK")
+                      otherButtonTitles:nil] show];
+});
+```
+Check the error object for detailed failure info. See file PushConstants.h for codes.
 
 ## Subscriber Key Implementation
 
