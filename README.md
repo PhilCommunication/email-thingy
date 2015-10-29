@@ -1,16 +1,16 @@
 # README
 
-1. [About](README.md#L31)
+1. [About](#0001)
 
-    1. [Marketing Cloud App Center](README.md#L55)
+    1. [Marketing Cloud App Center](#0002)
 
-    2. [Push Notifications](README.md#L75)
+    2. [Push Notifications](#0003)
 
-    3. [Subscriber key](README.md#L79)
+    3. [Subscriber key](#0004)
 
-    4. [Tags](README.md#L89)
+    4. [Tags](#0005)
 
-    5. [Beacon and Geofence Messages](README.md#L93)
+    5. [Beacon and Geofence Messages](#0006)
 
 2. [Android](README.md#L103)
 
@@ -52,7 +52,7 @@
 
     5. [Beacon and Geofence Message Implementation](README.md#L738)
 
-# About
+# About<a name="0001"></a>
 
 This project provides a template for creating a mobile app (Android or iOS) that uses the Journey Builder for Apps SDK.  It is also a UI for exploring its features and provides a mechanism to collect and send debugging information to learn about the workings of the SDK as you explore.
 
@@ -76,7 +76,7 @@ For iOS (`AppDelegate+ETPushConstants.m`):
 
 NB: You can use different keys for the staging/testing phase and the production phase.  Staging/testing keys are called `kETAppID_Debug` and `kETAccessToken_Debug`.
 
-## Marketing Cloud App Center
+## Marketing Cloud App Center<a name="0002"></a>
 
 App Center is the central development console for using Fuel’s APIs and building Marketing Cloud apps.
 
@@ -96,11 +96,11 @@ If you haven’t already, you should [create an App Center account](https://appc
 
 If you have an App Center account, you can [log in to that account](https://appcenter-auth.exacttargetapps.com/redirect).
 
-## Push Notifications
+## Push Notifications<a name="0003"></a>
 
 MobilePush lets you create and send targeted push messages based on cross-channel consumer data to encourage app usage and deliver increased ROI.  With MobilePush, you view how users navigate through your app and because MobilePush is built on the Salesforce Marketing Cloud, you can easily integrate push message campaigns with any email, SMS, or social campaigns.
 
-## Subscriber key
+## Subscriber key<a name="0004"></a>
 
 A subscriber is a person who has opted to receive communications from your organization. 
 
@@ -118,11 +118,11 @@ For example, using a subscriber key to identify a subscriber with a value other 
 
 The Salesforce Marketing Cloud interface as well as the Web Service SOAP API support functionality around subscribers identified with a subscriber key.
 
-## Tags
+## Tags<a name="0005"></a>
 
 Tags let you implement contact segmentation. You can set tags for subscriptions as defined by user choice.  Additionally, use tags to collect information from the mobile app and for unstructured data or data that can contain many potential unknown values. For example, you can use tags when the number of potential attribute names exceeds the number of potential values of an individual attribute (such as the favorite brand specified by a contact).
 
-## Beacon and Geofence Messages
+## Beacon and Geofence Messages<a name="0006"></a>
 
 You can use the location capabilities of the *JB4A SDK* to target messages to a segmented group of contacts. The app pre-downloads geofence messages and triggers those messages when a mobile device crosses a geofence boundary.  To use this functionality:
 
@@ -170,7 +170,7 @@ Review the Android documentation regarding the integration of your Android mobil
 
 6. Click **Credentials** in the left menu.
 
-7. Click **Add credentials **→ **API key**, and select **Android key** in the dialog.
+7. Click **Add credentials** → **API key**, and select **Android key** in the dialog.
 
     ![image alt text](imgReadMe/image_03.png)
 
