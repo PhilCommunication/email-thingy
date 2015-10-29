@@ -125,7 +125,7 @@ Tags let you implement contact segmentation. You can set tags for subscriptions 
 <a name="0006"></a>
 ## Beacon and Geofence Messages
 
-You can use the location capabilities of the *JB4A SDK* to target messages to a segmented group of contacts. The app pre-downloads geofence messages and triggers those messages when a mobile device crosses a geofence boundary.  To use this functionality:
+You can use the location capabilities of the *JB4A SDK* to target messages to a segmented group of contacts.  Send personalized messages to increase engagement.  The app pre-downloads geofence messages and triggers those messages when a mobile device crosses a geofence boundary.  To use this functionality:
 
 1. The account must have access to both MobilePush and Location Services.
 
@@ -511,9 +511,9 @@ The `configureTags()` method renders the tags section, a clickable EditTextPrefe
 <a name="0018"></a>
 ## Previous steps
 
-1. [iOS Provisioning Panel](#heading=h.n7uu76rehwgi)
+1. iOS Provisioning Panel
 
-2. [Create your apps in the App Center](#heading=h.93541hvmgam9)
+2. Create your apps in the App Center
 
 <a name="0019"></a>
 ### iOS Provisioning Panel
