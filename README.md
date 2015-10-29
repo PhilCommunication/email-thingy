@@ -12,47 +12,48 @@
 
     5. [Beacon and Geofence Messages](#0006)
 
-2. [Android](README.md#L103)
+2. [Android](#0007)
 
-    1. [Previous steps](README.md#L105)
+    1. [Previous steps](#0008)
 
-        1. [Provision Apps with Google](README.md#L111)
+        1. [Provision Apps with Google](#0009)
 
-        2. [Create your apps in the App Center](README.md#L177)
+        2. [Create your apps in the App Center](#0010)
 
-            1. [Add app to App Center](README.md#L187)
+            1. [Add app to App Center](#0011)
 
-            2. [Integrate App Center app](README.md#L213)
+            2. [Integrate App Center app](#0012)
 
-    2. [Implementing the SDK Push Notifications](README.md#L249)
+    2. [Implementing the SDK Push Notifications](#0013)
 
-    3. [Subscriber Key Implementation](README.md#L362)
+    3. [Subscriber Key Implementation](#0014)
 
-    4. [Tag Implementation](README.md#L403)
+    4. [Tag Implementation](#0015)
 
-    5. [Beacon and Geofence Message Implementation](README.md#L429)
+    5. [Beacon and Geofence Message Implementation](#0016)
 
-3. [iOS](README.md#L467)
+3. [iOS](#0017)
 
-    1. [Previous steps](README.md#L469)
+    1. [Previous steps](#0018)
 
-        1. [iOS Provisioning Panel](README.md#L475)
+        1. [iOS Provisioning Panel](#0019)
 
-        2. [Create your apps in the App Center](README.md#L585)
+        2. [Create your apps in the App Center](#0020)
 
-            1. [Add app to App Center](README.md#L595)
+            1. [Add app to App Center](#0021)
 
-            2. [Integrate App Center app](README.md#L621)
+            2. [Integrate App Center app](#0022)
 
-    2. [Implementing the SDK Push Notifications](README.md#L657)
+    2. [Implementing the SDK Push Notifications](#0023)
 
-    3. [Subscriber Key Implementation](README.md#L705)
+    3. [Subscriber Key Implementation](#0024)
 
-    4. [Tag Implementation](README.md#L719)
+    4. [Tag Implementation](#0025)
 
-    5. [Beacon and Geofence Message Implementation](README.md#L738)
+    5. [Beacon and Geofence Message Implementation](#0026)
 
-# About<a name="0001"></a>
+<a name="0001"></a>
+# About
 
 This project provides a template for creating a mobile app (Android or iOS) that uses the Journey Builder for Apps SDK.  It is also a UI for exploring its features and provides a mechanism to collect and send debugging information to learn about the workings of the SDK as you explore.
 
@@ -117,12 +118,12 @@ For example, using a subscriber key to identify a subscriber with a value other 
 * Include a single email address multiple times on a list. For example, if a message interaction sends a separate message for each car a subscriber owns, it may be appropriate for a single subscriber to receive multiple messages.
 
 The Salesforce Marketing Cloud interface as well as the Web Service SOAP API support functionality around subscribers identified with a subscriber key.
-
-## Tags<a name="0005"></a>
+<a name="0005"></a>
+## Tags
 
 Tags let you implement contact segmentation. You can set tags for subscriptions as defined by user choice.  Additionally, use tags to collect information from the mobile app and for unstructured data or data that can contain many potential unknown values. For example, you can use tags when the number of potential attribute names exceeds the number of potential values of an individual attribute (such as the favorite brand specified by a contact).
-
-## Beacon and Geofence Messages<a name="0006"></a>
+<a name="0006"></a>
+## Beacon and Geofence Messages
 
 You can use the location capabilities of the *JB4A SDK* to target messages to a segmented group of contacts. The app pre-downloads geofence messages and triggers those messages when a mobile device crosses a geofence boundary.  To use this functionality:
 
@@ -132,14 +133,16 @@ You can use the location capabilities of the *JB4A SDK* to target messages to a 
 
 3. You must receive user permission to implement location services.
 
+<a name="0007"></a>
 # Android
-
+<a name="0008"></a>
 ## Previous steps
 
 1. Provision Apps with Google  
 
 2. Create your apps in the App Center
 
+<a name="0009"></a>
 ### Provision Apps with Google
 
 These steps are key to receiving push messages in your app.
@@ -206,6 +209,7 @@ Review the Android documentation regarding the integration of your Android mobil
 
 14. Use the API Key from the server application created above to add to your MobilePush app in the *Create your apps in the App Center* step. And use the project number to set the `gcm_sender_id` in your project.
 
+<a name="0010"></a>
 ### Create your apps in the App Center
 
 In order to connect your app to your Marketing Cloud account, you must follow these steps:
@@ -216,6 +220,7 @@ In order to connect your app to your Marketing Cloud account, you must follow th
 
 3. Add the Provisioning info created in the GCM Console to the app in the App Center.
 
+<a name="0011"></a>
 #### Add app to App Center
 
 To create a new MobilePush app:
@@ -242,6 +247,7 @@ To create a new MobilePush app:
 
 4. Click **Next** in order to integrate this new app with your Marketing Cloud account.
 
+<a name="0012"></a>
 #### Integrate App Center app
 
 The MobilePush app created in the App Center must be connected to a specific Marketing Cloud account. You must have a login for your Marketing Cloud account in order to connect this MobilePush app to the correct Marketing Cloud account.
@@ -278,6 +284,7 @@ Follow these steps in order to connect this MobilePush app to the correct Market
 
 Record the **Application ID** and the **Access Token** as they will be used later in the secrets.xml file.
 
+<a name="0013"></a>
 ## Implementing the SDK Push Notifications
 
 Update the following files in your project:
@@ -391,6 +398,7 @@ dependencies {
 
 The boolean parameters `ANALYTICS_ENABLED`, `CLOUD_PAGES_ENABLED`, `WAMA_ENABLED` and `LOCATION_ENABLED` enable certain functionalities of the SDK, however, they are not required for the push notifications themselves to function which will still be sent even if all are set to false.
 
+<a name="0014"></a>
 ## Subscriber Key Implementation
 
 1. Create a new activity called `SettingsActivity` that extends `PreferenceActivity` in your project.
@@ -432,6 +440,7 @@ It will take up to 15 minutes for the new value to be recorded in the Contact Re
 
 By default, if your app does not set the Subscriber Key using `setSubscriberKey()`, the registration sent will be matched with a Contact Record that matches the System Token included in the registration payload. If no match is found, then a new Subscriber Key will be set in the Marketing Cloud and will not be sent back to the SDK.
 
+<a name="0015"></a>
 ## Tag Implementation
 
 This feature is implemented in Settings Preferences.  We assume that the Subscriber Key feature has been implemented as described in this guide in order for the following steps to work.
@@ -458,6 +467,7 @@ The `storeAllTags(Set<String> tags)` method saves the tags in Preferences and po
 
 The `configureTags()` method renders the tags section, a clickable EditTextPreference to add a new tag and the tags from allTags with checkboxes to enable/disable the tag.
 
+<a name="0016"></a>
 ## Beacon and Geofence Message Implementation
 
 1. In your application’s app\build.gradle file add the following dependence (required for applications that will run on devices with Android OS < 5.0):
@@ -495,15 +505,17 @@ The `configureTags()` method renders the tags section, a clickable EditTextPrefe
 
     `public static final boolean LOCATION_ENABLED = true;`
 
-
+<a name="0017"></a>
 # iOS
 
+<a name="0018"></a>
 ## Previous steps
 
 1. [iOS Provisioning Panel](#heading=h.n7uu76rehwgi)
 
 2. [Create your apps in the App Center](#heading=h.93541hvmgam9)
 
+<a name="0019"></a>
 ### iOS Provisioning Panel
 
 You must provision your mobile app in the iOS Provisioning Panel. The certificates issued in the process remain valid for one year. Ensure that you repeat this procedure once per year before your certificates expire to maintain app functionality. Follow the instructions below to integrate version 3.4.2 of the Journey Builder for Apps SDK with your iOS mobile app.
@@ -614,6 +626,7 @@ You must provision your mobile app in the iOS Provisioning Panel. The certificat
 
 39. Use the production and development certificates (the .p12 files) created in the previous steps along with the passwords to add to your MobilePush app in the the *Create your apps in the App Center* step.
 
+<a name="0020"></a>
 ### Create your apps in the App Center
 
 In order to connect your app to your Marketing Cloud account, you must follow these steps:
@@ -624,6 +637,7 @@ In order to connect your app to your Marketing Cloud account, you must follow th
 
 3. Add the Provisioning info created in the iOS Dev Center to the app in the App Center.
 
+<a name="0021"></a>
 #### Add app to App Center
 
 To create a new MobilePush app:
@@ -650,6 +664,7 @@ To create a new MobilePush app:
 
 4. Click **Next** in order to integrate this new app with your Marketing Cloud account.
 
+<a name="0022"></a>
 #### Integrate App Center app
 
 The MobilePush app created in the App Center must be connected to a specific Marketing Cloud account. You must have a login for your Marketing Cloud account in order to connect this MobilePush app to the correct Marketing Cloud account.
@@ -686,6 +701,7 @@ In an Enterprise 2.0 account, ensure that you select the correct business unit f
 
     ![image alt text](imgReadMe/image_15.png)
 
+<a name="0023"></a>
 ## Implementing the SDK Push Notifications
 
 **AppDelegate+ETPushConstants.m**
@@ -734,6 +750,7 @@ dispatch_async(dispatch_get_main_queue(), ^{
 ```
 Check the error object for detailed failure info. See file PushConstants.h for codes.
 
+<a name="0024"></a>
 ## Subscriber Key Implementation
 
 To update the subscriber key, you should create a feature for the user to introduce a value, and then set this new value in the pushManager.
@@ -748,6 +765,7 @@ To set the subscriber key, use the following snippet (substitute self.subscriber
 ```objective-c
 [[ETPush pushManager] setSubscriberKey:self.subscriberKey.text];
 ```
+<a name="0025"></a>
 ## Tag Implementation
 
 To implement contact segmentation by tags, include code to set tags for subscriptions as defined by user choice.
@@ -767,6 +785,7 @@ To get all the tags:
 [[ETPush pushManager] allTags];
 ```
 
+<a name="0026"></a>
 ## Beacon and Geofence Message Implementation
 
 **AppDelegate+ETPush.m**
