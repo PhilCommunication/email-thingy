@@ -76,7 +76,7 @@ For iOS (`AppDelegate+ETPushConstants.m`):
 
 NB: You can use different keys for the staging/testing phase and the production phase.  Staging/testing keys are called `kETAppID_Debug` and `kETAccessToken_Debug`.
 
-## Marketing Cloud App Center<a name="0002"></a>
+<a name="0002"></a>## Marketing Cloud App Center
 
 App Center is the central development console for using Fuel’s APIs and building Marketing Cloud apps.
 
@@ -96,11 +96,11 @@ If you haven’t already, you should [create an App Center account](https://appc
 
 If you have an App Center account, you can [log in to that account](https://appcenter-auth.exacttargetapps.com/redirect).
 
-## Push Notifications<a name="0003"></a>
+<a name="0003"></a>## Push Notifications
 
 MobilePush lets you create and send targeted push messages based on cross-channel consumer data to encourage app usage and deliver increased ROI.  With MobilePush, you view how users navigate through your app and because MobilePush is built on the Salesforce Marketing Cloud, you can easily integrate push message campaigns with any email, SMS, or social campaigns.
 
-## Subscriber key<a name="0004"></a>
+<a name="0004"></a>## Subscriber key
 
 A subscriber is a person who has opted to receive communications from your organization. 
 
